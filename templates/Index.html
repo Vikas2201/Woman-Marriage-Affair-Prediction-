@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Affair Detection Project</title>
+    <link rel="stylesheet" href="../static/Style1.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+</head>
+<body>
+<section>
+    <div class="side">
+        <img src="{{url_for('static', filename='vikas.jpeg')}}" width="350px" height="350px">
+        <h2>Project: Affair Detection System</h2>
+        <h2>Using Machine Learning, Python, Flask</h2>
+
+        <h2>Made By Vikas</h2>
+    </div>
+    <div class="vl"></div>
+    <div class="main">
+            <h1>Machine Learning App with Flask</h1>
+            <h3>Enter Your Details</h3>
+            <form action="/predict" method="POST">
+
+                <h3>Marriage Rating</h3>
+                <select class="form-select form-select-md mb-3" aria-label=".form-select-lg example" name="rate_marriage">
+                <option value="Very Poor">Very Poor</option>
+                <option value="Poor">Poor</option>
+                <option value="50-50">50-50</option>
+                <option value="Good">Good</option>
+                <option value="Very Good">Very Good</option>
+                </select>
+
+                <br/>
+                <h3>Enter Woman Age</h3>
+                <input type="number" class="form-control" id="age" name="age" required="required">
+                <br/>
+
+                <br/>
+                <h3>How Many Years Are You In Marriage?</h3>
+                <input type="number" step=any class="form-control" id="yrs_married" name="yrs_married" placeholder="For example, 6yrs 8 months is 6.8" required="required">
+                <br/>
+
+                <br/>
+                <h3>How Many Child You Have?</h3>
+                <input type="number" class="form-control" id="children" name="children" required="required">
+                <br/>
+
+                <h3>How Religious She Is?</h3>
+                <select class="form-select form-select-md mb-3" aria-label=".form-select-lg example" name="religious">
+                <option value="Not Religious">Not Religious</option>
+                <option value="Weak Religious">Weak Religious</option>
+                <option value="Religious">Religious</option>
+                <option value="Strongly Religious">Strongly Religious</option>
+                </select>
+
+                <h3>Enter Level Of Education</h3>
+                <select class="form-select form-select-md mb-3" aria-label=".form-select-lg example" name="educ">
+                <option value="grade school">grade school</option>
+                <option value="high school">high school</option>
+                <option value="some college">some college</option>
+                <option value="some graduate school">some graduate school</option>
+                <option value="advanced degree">advanced degree</option>
+                <option value="college graduate">college graduate</option>
+                </select>
+
+                <br/>
+                <h3>How Many Time Spent In Extra-Marital Affairs?</h3>
+                <input type="number" step=any class="form-control" id="affairs" name="affairs"  placeholder="For example, 5days 7hr is 5.7" required="required">
+                <br/>
+
+                    <input type="submit" class="btn-info" value="Predict">
+            </form>
+    </div>
+</section>
+</body>
+</html>
